@@ -39,15 +39,15 @@ Clone the github Repo and import in intellij (or your choice of IDE) \
 
 Once you have installed above software, run below commands to get this application deployed
 - `mvn clean install`
-- `docker build -t event-service-docker:event-service . `
-- `minikube image load event-service-docker:event-service`
+- `docker build -t review-service-docker:event-service . `
+- `minikube image load review-service-docker:event-service`
 - Check if the images is available in minikube by running below command
     - `minikube image ls --format table`
 - Once image is available run below command
     - `kubectl apply -f deployment.yaml`
 - If its your first time deploying the run below command
-    - `kubectl expose deployment event-service --type=NodePort`
-- Lastly run this command - `minikube service event-service`
+    - `kubectl expose deployment review-service --type=NodePort`
+- Lastly run this command - `minikube service review-service`
 
 ## Acknowledgments
 - [Baeldung](https://www.baeldung.com)
