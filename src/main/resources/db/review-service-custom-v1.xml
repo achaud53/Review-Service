@@ -1,0 +1,44 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+						http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd
+						http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+	<!--				defaultValueConstraintName="DF__REVIEW_DETAILS__CREAT__058F9352"-->
+	<changeSet author="Group 13" id="20231014-1">
+		<createTable tableName="REVIEW_DETAILS">
+			<column computed="false" name="ID" type="bigint"
+				autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="REVIEW_DETAILS_PK" />
+			</column>
+			<column computed="false" name="TITLE"
+				type="varchar(255)" />
+			<column computed="false" name="DESCRIPTION" type="varchar(255)" />
+			<column computed="false" name="LOCATION" type="varchar(255)" />
+			<column computed="false" name="PRICE" type="varchar(255)" />
+			<column computed="false" defaultValueComputed="CURRENT_TIMESTAMP"
+				name="CREATE_TS" type="datetime" />
+		</createTable>
+	</changeSet>
+
+	<changeSet author="Group13" id="20231014-2">
+		<insert tableName="REVIEW_DETAILS">
+			<column name="TITLE" value="Bengaluru Comic Con 2023" />
+			<column name="DESCRIPTION" value="Bengaluru’s biggest pop-culture event is back!" />
+			<column name="LOCATION" value="Bengaluru" />
+			<column name="PRICE" value="Rs. 899" />
+		</insert>
+
+		<insert tableName="REVIEW_DETAILS">
+			<column name="TITLE" value="Chandigarh Comedy Festival 2023" />
+			<column name="DESCRIPTION" value="Chandigarh Comedy Festival is back!" />
+			<column name="LOCATION" value="Chandigarh" />
+			<column name="PRICE" value="Rs. 999" />
+		</insert>
+
+	</changeSet>
+</databaseChangeLog>
+
