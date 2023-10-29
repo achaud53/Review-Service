@@ -1,4 +1,4 @@
-# Event Service
+# Review Service
 Basic app to provide event details via REST API
 
 ## Getting Started
@@ -28,7 +28,7 @@ Clone the github Repo and import in intellij (or your choice of IDE) \
 - To run the program, execute below commands in terminal at root level
     ```
     mvn clean install
-    java -jar target/event-service.jar
+    java -jar target/review-service.jar
     ```
 
 ### Deploying on Kubernetes Minikube
